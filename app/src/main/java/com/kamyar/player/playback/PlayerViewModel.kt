@@ -37,7 +37,7 @@ class PlayerViewModel : ViewModel() {
         private set
     var durationMs by mutableLongStateOf(0L)
         private set
-    var speed by mutableFloatStateOf(1f)
+    var playbackSpeed by mutableFloatStateOf(1f)
         private set
     var shuffle by mutableStateOf(false)
         private set
@@ -151,7 +151,7 @@ class PlayerViewModel : ViewModel() {
     fun setSpeed(value: Float) {
         val clamped = value.coerceIn(0.5f, 2f)
         controller?.setPlaybackSpeed(clamped)
-        speed = clamped
+        playbackSpeed = clamped
     }
 
     override fun onCleared() {

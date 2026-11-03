@@ -185,7 +185,7 @@ fun NowPlayingScreen(player: PlayerViewModel, onCollapse: () -> Unit) {
                     Text(
                         text = "${rate}x",
                         style = MaterialTheme.typography.labelMedium,
-                        color = if (player.speed == rate) MaterialTheme.colorScheme.primary
+                        color = if (player.playbackSpeed == rate) MaterialTheme.colorScheme.primary
                         else MaterialTheme.colorScheme.onSurfaceVariant
                     )
                 }
